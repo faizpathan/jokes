@@ -8,13 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+    
+{
+    var jokes: String = "" {
+        didSet {
+            textVIew.text = "\(jokes)"
+        }
+    }
+    
+    @IBOutlet weak var textVIew: UITextView!
+    
+    
+    
+    @IBAction func loadJokes(sender: AnyObject) {
+        
+        JokeService.GetJokeData{ (joke) in
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                
+                self.jokes = (joke?.jokes)!
 
+                
+            }
+        }
+
+        
+    }
+    
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+      
+        
     }
+        
 
+   
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

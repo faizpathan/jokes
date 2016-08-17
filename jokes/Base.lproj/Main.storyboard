@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="jokes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pgs-lm-w6K">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcD-Rd-fHc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="Load Joke">
+                                    <color key="titleColor" red="1" green="0.15670715488085962" blue="0.06320902997361677" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.015385435611063756" green="0.053226575133981414" blue="0.54393028846153846" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loadJokes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4X-V5-i2A"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap &quot;Load Joke&quot; for jokes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-dZ-5bK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JQZ-hl-uJJ"/>
+                                </constraints>
+                                <color key="textColor" red="0.16295261005177958" green="0.0033198473479373186" blue="0.3046875" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JQZ-hl-uJJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JQZ-hl-uJJ"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wcD-Rd-fHc" firstAttribute="centerX" secondItem="pgs-lm-w6K" secondAttribute="centerX" id="8Ys-Dg-QRk"/>
+                            <constraint firstItem="wcD-Rd-fHc" firstAttribute="centerY" secondItem="pgs-lm-w6K" secondAttribute="centerY" id="AZV-vg-N35"/>
+                            <constraint firstAttribute="trailing" secondItem="5Fv-dZ-5bK" secondAttribute="trailing" id="TEI-7A-Bv5"/>
+                            <constraint firstItem="pgs-lm-w6K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fEf-XG-1XU"/>
+                            <constraint firstItem="5Fv-dZ-5bK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fHd-lx-DeL"/>
+                            <constraint firstItem="pgs-lm-w6K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ghB-MR-anX"/>
+                            <constraint firstAttribute="trailing" secondItem="pgs-lm-w6K" secondAttribute="trailing" id="jM8-P3-fN2"/>
+                            <constraint firstItem="5Fv-dZ-5bK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wFw-R7-ohR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgs-lm-w6K" secondAttribute="bottom" id="zSj-dT-HW3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pgs-lm-w6K"/>
+                                <exclude reference="wcD-Rd-fHc"/>
+                                <exclude reference="5Fv-dZ-5bK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="zSj-dT-HW3"/>
+                                <exclude reference="8Ys-Dg-QRk"/>
+                                <exclude reference="AZV-vg-N35"/>
+                                <exclude reference="TEI-7A-Bv5"/>
+                                <exclude reference="fHd-lx-DeL"/>
+                                <exclude reference="wFw-R7-ohR"/>
+                                <exclude reference="fEf-XG-1XU"/>
+                                <exclude reference="ghB-MR-anX"/>
+                                <exclude reference="jM8-P3-fN2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pgs-lm-w6K"/>
+                                <include reference="wcD-Rd-fHc"/>
+                                <include reference="5Fv-dZ-5bK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="zSj-dT-HW3"/>
+                                <include reference="8Ys-Dg-QRk"/>
+                                <include reference="AZV-vg-N35"/>
+                                <include reference="TEI-7A-Bv5"/>
+                                <include reference="fHd-lx-DeL"/>
+                                <include reference="wFw-R7-ohR"/>
+                                <include reference="fEf-XG-1XU"/>
+                                <include reference="ghB-MR-anX"/>
+                                <include reference="jM8-P3-fN2"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="textVIew" destination="5Fv-dZ-5bK" id="vkV-5D-ani"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="411" y="225"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back.jpg" width="640" height="1136"/>
+    </resources>
 </document>

@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B362DF801D17DEF600D23CCD /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B362DF7F1D17DEF600D23CCD /* back.jpg */; };
 		B36E34681D12F26600BE34C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E34671D12F26600BE34C3 /* AppDelegate.swift */; };
 		B36E346A1D12F26600BE34C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E34691D12F26600BE34C3 /* ViewController.swift */; };
 		B36E346D1D12F26600BE34C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36E346B1D12F26600BE34C3 /* Main.storyboard */; };
 		B36E346F1D12F26600BE34C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36E346E1D12F26600BE34C3 /* Assets.xcassets */; };
 		B36E34721D12F26600BE34C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36E34701D12F26600BE34C3 /* LaunchScreen.storyboard */; };
+		B36E347A1D1312BF00BE34C3 /* NetworkOprator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E34791D1312BF00BE34C3 /* NetworkOprator.swift */; };
+		B36E347E1D13136600BE34C3 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E347D1D13136600BE34C3 /* JokeService.swift */; };
+		B36E34801D13154900BE34C3 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E347F1D13154900BE34C3 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B362DF7F1D17DEF600D23CCD /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		B36E34641D12F26600BE34C3 /* jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36E34671D12F26600BE34C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B36E34691D12F26600BE34C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		B36E346E1D12F26600BE34C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B36E34711D12F26600BE34C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B36E34731D12F26600BE34C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36E34791D1312BF00BE34C3 /* NetworkOprator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOprator.swift; sourceTree = "<group>"; };
+		B36E347D1D13136600BE34C3 /* JokeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
+		B36E347F1D13154900BE34C3 /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				B36E34671D12F26600BE34C3 /* AppDelegate.swift */,
 				B36E34691D12F26600BE34C3 /* ViewController.swift */,
+				B36E347D1D13136600BE34C3 /* JokeService.swift */,
+				B36E347F1D13154900BE34C3 /* Joke.swift */,
+				B36E34791D1312BF00BE34C3 /* NetworkOprator.swift */,
+				B362DF7F1D17DEF600D23CCD /* back.jpg */,
 				B36E346B1D12F26600BE34C3 /* Main.storyboard */,
 				B36E346E1D12F26600BE34C3 /* Assets.xcassets */,
 				B36E34701D12F26600BE34C3 /* LaunchScreen.storyboard */,
@@ -122,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B362DF801D17DEF600D23CCD /* back.jpg in Resources */,
 				B36E34721D12F26600BE34C3 /* LaunchScreen.storyboard in Resources */,
 				B36E346F1D12F26600BE34C3 /* Assets.xcassets in Resources */,
 				B36E346D1D12F26600BE34C3 /* Main.storyboard in Resources */,
@@ -136,6 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36E346A1D12F26600BE34C3 /* ViewController.swift in Sources */,
+				B36E34801D13154900BE34C3 /* Joke.swift in Sources */,
+				B36E347A1D1312BF00BE34C3 /* NetworkOprator.swift in Sources */,
+				B36E347E1D13136600BE34C3 /* JokeService.swift in Sources */,
 				B36E34681D12F26600BE34C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +302,7 @@
 				B36E34781D12F26600BE34C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
